@@ -1,0 +1,23 @@
+<div class="search-form mt-4">
+    <form method="post">
+        <div class="mb-3">
+            <label for="searchInput" class="form-label">Từ khóa</label>
+            <input type="text" name="q" class="form-control" id="searchInput">
+        </div>
+        <div class="mb-3">
+            <label for="searchInput" class="form-label">Giới tính</label>
+            <select class="form-select" aria-label="Default select example" name="gender">
+                <option selected>Chọn giới tính</option>
+                <option value="male">Nam</option>
+                <option value="female">Nữ</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+<!-- Note 
+GET: dùng phương thức req.query
+POST: dùng phương thức req.body
+-->
