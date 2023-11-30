@@ -19,10 +19,10 @@ app.use(
         extended: true,
     }),
 );
-      app.use(express.json());
+         app.use(express.json());
 
 // Route
-      route(app);
+          route(app);
 
 app.listen(port, () => {
                  console.log(`Example app listening on port ${port}`);
