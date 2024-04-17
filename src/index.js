@@ -31,6 +31,24 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 app.use(methodOverride('_method'))
+
+app.get('/middleware',
+    function(req,res,next) {
+        if(['vethuong, vevip'].includes(req.query.ve)) {
+            req.face = 'ggg'
+            return next();
+        }
+        res.status(403).json({
+            message: 'Access denied'
+        })
+    },
+
+    function(req,res,next) {
+    res.json({
+        message: 'Succesfully !',
+        face: req.face
+    })
+})
 // Route
 route(app)
 
